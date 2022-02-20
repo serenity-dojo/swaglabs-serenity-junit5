@@ -1,19 +1,6 @@
-# Serenity JUnit Starter project
+# Sample Serenity BDD Projet with JUnit 5
 
-This is the simplest possible build script setup for Serenity BDD using Java and JUnit. 
-
-This is a very minimal sample project using JUnit and Serenity BDD in Java. 
-You can use this project as a quick starting point for your own projects.
-
-## Get the code
-
-Git:
-
-    git clone https://github.com/serenity-bdd/serenity-junit-starter.git
-    cd serenity-junit-starter
-
-
-Or simply [download a zip](https://github.com/serenity-bdd/serenity-junit-starter/archive/master.zip) file.
+This is a simple demo test suite using Serenity BDD and JUnit 5
 
 ## Use Maven
 

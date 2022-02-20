@@ -1,5 +1,7 @@
 package swaglabs.features.shopping_cart;
 
+import net.serenitybdd.core.pages.WebElementState;
+import net.serenitybdd.core.steps.UIInteractions;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.annotations.CastMember;
@@ -31,6 +33,7 @@ class WhenManagingTheShoppingCart {
         @DisplayName("We can add an item to the cart directly from the product catalog")
         @Test
         void addASingleItem() {
+
             charles.attemptsTo(
                     ChooseItem.called("Sauce Labs Backpack").andAddItToTheShoppingCart(),
                     Ensure.that(ShoppingCartBar.SHOPPING_CART_BADGE).text().asAnInteger().isEqualTo(1)
