@@ -14,14 +14,15 @@ public class CalculatorSteps extends UIInteractions {
     private static final By OPERATOR_DROPDOWN = By.cssSelector("[ng-model=operator]");
     private static final By GO_BUTTON = By.id("gobutton");
     private static final By RESULT_FIELD = By.tagName("h2");
-    private static final Pattern A_VALID_NUMBER = Pattern.compile("-?\\d\\.?d*");
+    private static final Pattern A_VALID_NUMBER = Pattern.compile("-?\\d\\.?d*|Infinity");
+
     @Step
     public void openTheCalculatorApp() {
         openUrl("https://juliemr.github.io/protractor-demo/");
     }
 
     @Step("Calculate the answer to {0} {1} {2}")
-    public int theAnswerTo(String firstValue, String operator, String secondValue) {
+    public String theAnswerTo(String firstValue, String operator, String secondValue) {
 
         $(FIRST_VALUE_FIELD).sendKeys(firstValue);
         $(OPERATOR_DROPDOWN).selectByVisibleText(operator);
@@ -29,6 +30,6 @@ public class CalculatorSteps extends UIInteractions {
         $(GO_BUTTON).click();
         waitFor(ExpectedConditions.textMatches(RESULT_FIELD,A_VALID_NUMBER));
 
-        return Integer.parseInt($(RESULT_FIELD).getText());
+        return $(RESULT_FIELD).getText();
     }
 }

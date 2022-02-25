@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.annotations.CastMember;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -35,6 +36,7 @@ public class WhenLoggingOn {
         );
     }
 
+    @Disabled
     @ParameterizedTest(name = "{index}: {2}")
     @CsvSource(value = {
             "               ,secret_sauce   ,Username is required",
