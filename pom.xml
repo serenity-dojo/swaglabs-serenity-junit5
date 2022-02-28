@@ -10,8 +10,8 @@
     <name>Swaglabs Regression Test Suite</name>
 
     <properties>
-        <serenity.version>3.2.1-RC2-SNAPSHOT</serenity.version>
-        <serenity.maven.version>3.2.1-RC2-SNAPSHOT</serenity.maven.version>
+        <serenity.version>3.2.1-RC1</serenity.version>
+        <serenity.maven.version>3.2.1-RC1</serenity.maven.version>
         <junit5.version>5.8.2</junit5.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <encoding>UTF-8</encoding>
