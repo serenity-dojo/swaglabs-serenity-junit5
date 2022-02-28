@@ -36,7 +36,6 @@ public class WhenLoggingOn {
         );
     }
 
-    @Disabled
     @ParameterizedTest(name = "{index}: {2}")
     @CsvSource(value = {
             "               ,secret_sauce   ,Username is required",
