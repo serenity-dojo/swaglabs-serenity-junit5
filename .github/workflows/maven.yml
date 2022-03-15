@@ -25,7 +25,6 @@ jobs:
     - name: Run Tests
       run: mvn -B verify --file pom.xml -Denvironment=heroku -Dwebdriver.driver=chrome -Dcontext=chrome -Dinjected.tags="browser:chrome" -Dsysinfo.build=${GITHUB_RUN_ID}
 
-  To deploy to Github pages:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
