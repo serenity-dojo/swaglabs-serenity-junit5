@@ -62,20 +62,4 @@ class WhenManagingTheShoppingCart {
             );
         }
     }
-
-    @DisplayName("From the shopping cart page")
-    @Nested
-    @Tag("cart-page")
-    class FromTheShoppingCart {
-        @DisplayName("We can see the items currently in the cart")
-        @Test
-        void viewItems() {
-        }
-
-        @DisplayName("We can remove an item in the cart")
-        @Test
-        void remoteCart() {
-        }
-
-    }
 }
