@@ -10,9 +10,8 @@
     <name>Swaglabs Regression Test Suite</name>
 
     <properties>
-        <serenity.version>3.2.1</serenity.version>
-        <serenity.maven.version>3.2.1</serenity.maven.version>
-        <junit5.version>5.8.2</junit5.version>
+        <serenity.version>4.0.1</serenity.version>
+        <junit5.version>5.10.0</junit5.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <encoding>UTF-8</encoding>
         <tags></tags>
@@ -47,6 +46,12 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-ensure</artifactId>
+            <version>${serenity.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-saucelabs</artifactId>
             <version>${serenity.version}</version>
             <scope>test</scope>
         </dependency>
@@ -133,7 +138,7 @@
             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
-                <version>${serenity.maven.version}</version>
+                <version>${serenity.version}</version>
                 <configuration>
                     <tags>${tags}</tags>
                 </configuration>

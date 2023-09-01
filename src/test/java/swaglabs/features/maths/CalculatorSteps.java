@@ -1,7 +1,7 @@
 package swaglabs.features.maths;
 
 import net.serenitybdd.core.steps.UIInteractions;
-import net.thucydides.core.annotations.Step;
+import net.serenitybdd.annotations.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 

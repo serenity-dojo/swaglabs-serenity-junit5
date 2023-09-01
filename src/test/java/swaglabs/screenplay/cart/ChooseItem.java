@@ -1,6 +1,8 @@
 package swaglabs.screenplay.cart;
 
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Performable;
+import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.ui.Button;
@@ -20,21 +22,25 @@ public class ChooseItem {
 
     static Target addToCartButtonFor(String productName) {
         return Button.withText("Add to cart")
-                     .inside(PageElement.withCSSClass("inventory_item")
-                                        .containingText(productName));
+                .inside(PageElement.withCSSClass("inventory_item")
+                        .containingText(productName));
     }
 
     static Target removeFromCartButtonFor(String productName) {
         return Button.withText("Remove")
                 .inside(PageElement.withCSSClass("inventory_item")
-                                   .containingText(productName));
+                        .containingText(productName));
     }
 
     public Performable andAddItToTheShoppingCart() {
-        return Click.on(addToCartButtonFor(itemName));
+        return Task.where("{0} adds the '" + itemName + "' item to the cart",
+                Click.on(addToCartButtonFor(itemName))
+        );
     }
 
     public Performable andRemoveItFromTheShoppingCart() {
-        return Click.on(removeFromCartButtonFor(itemName));
+        return Task.where("{0} removes the '" + itemName + "' item from the cart",
+                Click.on(removeFromCartButtonFor(itemName))
+        );
     }
 }

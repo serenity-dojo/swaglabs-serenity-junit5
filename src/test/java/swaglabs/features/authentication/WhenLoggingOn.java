@@ -5,7 +5,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.annotations.CastMember;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -32,7 +31,7 @@ public class WhenLoggingOn {
         charles.attemptsTo(
                 Login.withCredentials("standard_user", "secret_sauce"),
                 WaitUntil.the(Banner.TITLE, isVisible()),
-                Ensure.that(Banner.TITLE).hasText("PRODUCTS")
+                Ensure.that(Banner.TITLE).hasText("Products")
         );
     }
 
